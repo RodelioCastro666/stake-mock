@@ -3,13 +3,21 @@ import useCounter from "../../hooks/useCounter";
 // "flex justify-center items-center gap-2 transition transform downSlider"
 export default function BettingChips() {
   const counter = useCounter();
+
+  function handleOnDrag(e: React.DragEvent, chipType: string) {
+    e.dataTransfer.setData("chipType", chipType);
+  }
   return (
     <div
       className={`flex justify-center  gap-2 h-auto mb-3   ${
         counter === 0 ? " downSlider" : " "
       }  `}
     >
-      <div className="w-[8%] ">
+      <div
+        className="bettingChips"
+        draggable
+        onDragStart={(e) => handleOnDrag(e, "5")}
+      >
         <svg
           width="100%"
           height="100%"
@@ -206,7 +214,6 @@ export default function BettingChips() {
           </g>
         </svg>
       </div>
-
       <div className="w-[8%]">
         <svg
           width="100%"

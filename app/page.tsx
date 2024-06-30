@@ -20,16 +20,10 @@ import MoneyDeatails from "@/components/GameScreenComponents/moneyDetails";
 import BettingChips from "@/components/GameScreenComponents/bettingChips";
 import RightOption from "@/components/GameScreenComponents/rightOptions";
 import Counter from "@/components/GameScreenComponents/counter";
-
+import GameFooterOptions from "@/components/GameScreenComponents/gameFooterOptions";
 // ____________________________________________
 
 // ICONS
-import { RiFullscreenLine } from "react-icons/ri";
-import { LuRectangleHorizontal } from "react-icons/lu";
-import { ImStatsBars } from "react-icons/im";
-import { RiStarSLine } from "react-icons/ri";
-import { FaBitcoin } from "react-icons/fa6";
-import { FaChevronDown } from "react-icons/fa";
 
 // ____________________________________________
 
@@ -109,15 +103,7 @@ export default function Home() {
       </div>
       <div className="bg-[#0F212E]  h-14  rounded-b-lg ">
         <div className="flex items-center gap-7 p-3 h-full">
-          <RiFullscreenLine className="text-[#AAB3CB]" />
-          <LuRectangleHorizontal className="text-[#AAB3CB]" />
-          <ImStatsBars className="text-[#AAB3CB]" />
-          <RiStarSLine className="text-[#AAB3CB]" />
-          <div className="flex gap-1">
-            <FaBitcoin className="text-[#6CDE07]" />
-            <p>USD</p> <FaChevronDown className="text-[#AAB3CB]" />
-          </div>
-          <div className="border-[1px] border-b-lime-50 h-full"></div>
+          <GameFooterOptions />
         </div>
       </div>
     </main>
